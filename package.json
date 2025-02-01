@@ -1,18 +1,30 @@
 {
   "name": "vue-tutorial",
   "version": "0.0.0",
+  "homepage": "https://artjac19.github.io/jake-artang",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "optimize-images": "node optimize-images.mjs",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
+    "fs-extra": "^11.3.0",
+    "imagemin": "^9.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-svgo": "^11.0.1",
+    "imagemin-webp": "^8.0.0",
+    "path": "^0.12.7",
+    "sharp": "^0.33.5",
     "vue": "^3.4.21"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
-    "vite": "^5.1.6"
+    "gh-pages": "^6.3.0",
+    "tailwindcss": "^3.4.11"
   }
 }
