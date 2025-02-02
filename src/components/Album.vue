@@ -13,7 +13,7 @@ const props = defineProps({
   audio: String
 });
 
-const url = ref("./src/assets/SVG/triangle.webp");
+const url = ref(`${import.meta.env.BASE_URL}/triangle.webp`);
 const isActive = ref(false);
 let elapsedTime = 0; // To track elapsed animation time
 let animationFrameId; // To store the animation frame ID
@@ -26,11 +26,11 @@ console.log("Audio initialized successfully:", purpose);
 const play = () => {
   isActive.value = !isActive.value;
   if (isActive.value) {
-    url.value = "./src/assets/SVG/pause.webp";
+    url.value = `${import.meta.env.BASE_URL}/pause.webp`;
     resumeAnimation(); // Resume animation
     resumeAudio();
   } else {
-    url.value = "./src/assets/SVG/triangle.webp";
+    url.value = `${import.meta.env.BASE_URL}/triangle.webp`;
     pauseAnimation(); // Pause animation
     pauseAudio();
   }
@@ -102,7 +102,7 @@ function animateCircle(duration = purpose.duration * 1000) {
       animationFrameId = requestAnimationFrame(step); // Continue the animation
     } else {
       elapsedTime = 0; // Reset elapsed time when animation completes
-      url.value = "./src/assets/SVG/triangle.webp"
+      url.value = `${import.meta.env.BASE_URL}/triangle.webp`;
     }
   }
 
@@ -283,6 +283,11 @@ function resumeAnimation() {
 
   .title-container {
     align-self: center;
+    margin: 30px 30px 15px 30px;
+  }
+
+  .title {
+    width: 60vw;
   }
 }
 

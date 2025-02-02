@@ -9,13 +9,13 @@ import WebDev from './components/WebDev.vue';
 
 const reload = () => window.location.reload()
 let tab = ref(1);
-const url = ref("./src/assets/menu.webp");
+const url =  ref(`${import.meta.env.BASE_URL}/menu.webp`);
 
 let switchTabs = (num) => {
   tab.value = num
   document.getElementById("vertMenu").style.display = "none";
   document.getElementById("socialsMenu").style.display = "none";
-  url.value = "./src/assets/menu.webp";
+  url.value = `${import.meta.env.BASE_URL}/menu.webp`;
   open.value = !open.value;
 }
 
@@ -26,9 +26,9 @@ const openTabs = () => {
   open.value = !open.value;
   if (open.value) {
     document.getElementById("vertMenu").style.display = "flex";
-    url.value = "./src/assets/xbutton.webp";
+    url.value = `${import.meta.env.BASE_URL}/xbutton.webp`;
   } else {  
-    url.value = "./src/assets/menu.webp";
+    url.value = `${import.meta.env.BASE_URL}/menu.webp`;
     document.getElementById("vertMenu").style.display = "none";
     document.getElementById("socialsMenu").style.display = "none";
   }
@@ -80,6 +80,7 @@ const showSocials = () => {
         Z"/>
         </svg>
       </div>
+    <div class="liner"></div>
     <div id="vertMenu" class="vert-menu">
           <button class="vert-item" @click="switchTabs(1)">Music</button>
           <button class="vert-item" @click="switchTabs(2)">Web Dev</button>
@@ -153,6 +154,9 @@ a:visited {
   padding: 0;
   margin: 0;
   line-height: 1;
+  color: black;              /* Set your desired text color */
+  -webkit-appearance: none;  /* Remove default mobile styling */
+  appearance: none;
 }
 
 .header {
@@ -165,6 +169,10 @@ a:visited {
 
 .header:hover {
   cursor: pointer;
+}
+
+.liner {
+  display: none;
 }
 
 .container {
@@ -358,6 +366,23 @@ a:visited {
   .menu {
     flex-direction: column;
     margin: 0;
+  }
+
+  .blurb {
+    margin: 0 6vw 60px 6vw;
+  }
+
+  .trapezoid-box {
+    transform: scaleY(-1);
+    transform-origin: center;
+  }
+
+  .liner {
+    display: block;
+    background-color: var(--o);
+    width: 100vw;
+    height: 5px;
+    margin: 0 0 30px 0;
   }
 }
 

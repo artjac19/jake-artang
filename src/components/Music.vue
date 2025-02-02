@@ -1,6 +1,8 @@
 <script setup>
 import Album from './Album.vue';
 
+const base = import.meta.env.BASE_URL;
+
 </script>
 
 <template>
@@ -9,21 +11,21 @@ import Album from './Album.vue';
             <Album style="background-color: var(--t); margin-bottom: 4vh;"
                 title="Purpose" 
                 desc="A collaboration with Jordan Waters. Rap with live instruments for the beat. Thanks to Maddox Neumann (drums), Jared Burnett (bass), and Owen McCormick (production) for helping bring this piece to life. Released February 2025 available on all streaming platforms."
-                src="./src/assets/purposeCover.webp"
+                :src="base + 'purposeCover.webp'"
                 fill="#9bffc2"
                 spotify="https://open.spotify.com/artist/6NPdLNwQEqgBNx0XbuHmgl?si=w-2snzLDQAitB84O0EEsVgm"
                 youtube="https://youtube.com/@jakedoesjazz-ex5fd?si=048KHkaBR3_l9BOy"
                 apple="https://music.apple.com/us/artist/jake-artang/1702946623"
-                audio="/purposeClip.mp3"/>
+                :audio="base + 'purposeClip.mp3'"/>
             <Album style="background-color: var(--s);"
                 title="First Impressions" 
                 desc="This EP features 5 of my favorite jazz standards, all solo piano. Produced by Jake Artang and Owen McCormick, Released August 2023 available on youtube."
-                src="./src/assets/firstImpressions.webp"
+                :src="base + 'firstImpressions.webp'"
                 fill="#D8C4BD"
                 spotify="none"
                 youtube="https://youtube.com/playlist?list=PLytg67aqmSXTJseMtiIVh10yhfRPPaHSb&si=xdweKbe1DxhtceII"
                 apple="none"
-                audio="/tellmeClip.mp3"/>
+                :audio="base + 'tellmeClip.mp3'"/>
         </div>
         <div class="about-me">
             <img class="me" src="../assets/BestPhotos/onbench.webp">
@@ -96,7 +98,7 @@ import Album from './Album.vue';
   }
 
   .bio {
-    width: 66vw;
+    width: 80vw;
     text-align: center;
   }
 

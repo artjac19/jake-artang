@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && xcopy CNAME dist /Y",
     "preview": "vite preview",
     "optimize-images": "node optimize-images.mjs",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && npx gh-pages -d dist"
   },
   "dependencies": {
     "fs-extra": "^11.3.0",
