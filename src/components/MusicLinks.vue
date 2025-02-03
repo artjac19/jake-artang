@@ -19,17 +19,17 @@ const exists = (num) => {
 
 <template>
     <div style="margin-bottom: .7vh; display: flex; flex-direction: row; align-items: center;">
-      <a v-if="exists(1)" :href="spotify" target="_blank" style="position: relative; display: inline-block;">
+      <a v-if="exists(1)" :href="spotify" target="_blank" style="position: relative; display: inline-block; margin: 0 10px 0 10px;">
           <img src="../assets/Icons/spotify.webp" width="30px" height="30px" style="margin-right:3vw; filter: brightness(0%);">
           <span class="link-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></span>
       </a>
 
-      <a v-if="exists(2)" :href="youtube" target="_blank" style="position: relative; display: inline-block;">
+      <a v-if="exists(2)" :href="youtube" target="_blank" style="position: relative; display: inline-block; margin: 0 10px 0 10px;">
           <img src="../assets/Icons/youtubelogo.webp" width="30px" height="30px" style="margin-right:3vw; filter: brightness(0%);">
           <span class="link-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></span>
       </a>
       
-      <a v-if="exists(3)" :href="apple" target="_blank" style="position: relative; display: inline-block;">
+      <a v-if="exists(3)" :href="apple" target="_blank" style="position: relative; display: inline-block; margin: 0 10px 0 10px;">
           <img src="../assets/Icons/apple.webp" width="30px" height="30px" style="margin-right:3vw; filter: brightness(0%);">
           <span class="link-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></span>
       </a>

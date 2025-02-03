@@ -9,13 +9,13 @@ import WebDev from './components/WebDev.vue';
 
 const reload = () => window.location.reload()
 let tab = ref(1);
-const url =  ref(`${import.meta.env.BASE_URL}/menu.webp`);
+const url =  ref(`${import.meta.env.BASE_URL}menu.webp`);
 
 let switchTabs = (num) => {
   tab.value = num
   document.getElementById("vertMenu").style.display = "none";
   document.getElementById("socialsMenu").style.display = "none";
-  url.value = `${import.meta.env.BASE_URL}/menu.webp`;
+  url.value = `${import.meta.env.BASE_URL}menu.webp`;
   open.value = !open.value;
 }
 
@@ -26,9 +26,9 @@ const openTabs = () => {
   open.value = !open.value;
   if (open.value) {
     document.getElementById("vertMenu").style.display = "flex";
-    url.value = `${import.meta.env.BASE_URL}/xbutton.webp`;
+    url.value = `${import.meta.env.BASE_URL}xbutton.webp`;
   } else {  
-    url.value = `${import.meta.env.BASE_URL}/menu.webp`;
+    url.value = `${import.meta.env.BASE_URL}menu.webp`;
     document.getElementById("vertMenu").style.display = "none";
     document.getElementById("socialsMenu").style.display = "none";
   }
@@ -155,8 +155,6 @@ a:visited {
   margin: 0;
   line-height: 1;
   color: black;              /* Set your desired text color */
-  -webkit-appearance: none;  /* Remove default mobile styling */
-  appearance: none;
 }
 
 .header {
@@ -165,6 +163,19 @@ a:visited {
   font-size: 2em;
   padding: 2vh;
   background-color: transparent;
+  color: black !important; /* Force color */
+  text-decoration: none !important; /* Ensure no underline */
+  -webkit-appearance: none; /* Remove default button styling on iOS */
+  appearance: none;
+}
+
+.header:focus,
+.header:active {
+  color: black !important;
+  outline: none !important;
+  border: none !important;
+  text-decoration: none !important;
+  -webkit-tap-highlight-color: transparent; /* Disable highlight tap effect */
 }
 
 .header:hover {
