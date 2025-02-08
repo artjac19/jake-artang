@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import Music from './components/Music.vue';
 import ContactUs from './components/ContactUs.vue';
 import ContactMe from './components/ContactMe.vue';
@@ -41,6 +41,10 @@ const showSocials = () => {
   } else {
     document.getElementById("socialsMenu").style.display = "none";
   }
+}
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
 }
   
 </script>

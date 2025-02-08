@@ -2,12 +2,12 @@
 
 import { onMounted } from 'vue';
 
-onMounted(() => {
+/*onMounted(() => {
   if (videoElement.value) {
     videoElement.value.load(); // Force browser to process the video
   }
 });
-
+ref="videoElement" preload="metadata" muted playsinline*/
 
 </script>
 
@@ -15,27 +15,27 @@ onMounted(() => {
     <div style="display: flex; flex-direction: column; align-items: center; margin: 0; padding: 0;">
         <p class="blurb">When I'm not making music or coding websites I like to do cool things and make cool edits with my friends. Feel free to reach out if you want something filmed/edited in my style.</p>
         <div class="videos">
-            <video class="video" ref="videoElement" preload="metadata" muted playsinline controls>
+            <video class="video" poster="../assets/edits/missourjrdev.webp" playsinline controls>
                 <source src="../assets/edits/missourijrdev.mp4" type="video/mp4">
             </video>
-            <video class="video" ref="videoElement" preload="metadata" muted playsinline controls>
+            <video class="video" poster="../assets/edits/newcamedit.webp" playsinline controls>
                 <source src="../assets/edits/newcameditcomp.mp4" type="video/mp4">
             </video>
-            <img src="../assets/edits/laurenmoneyshot.png" class="video">
-            <video class="video" ref="videoElement" preload="metadata" muted playsinline controls>
+            <img src="../assets/edits/laurenmoneyshot.webp" class="video">
+            <video class="video" poster="../assets/edits/wii.webp" playsinline controls>
                 <source src="../assets/edits/wii.mp4" type="video/mp4">
             </video>
-            <img src="../assets/edits/trey.png" class="video">
-            <img src="../assets/edits/sawyer.png" class="video">
-            <video class="video" ref="videoElement" preload="metadata" muted playsinline controls>
+            <img src="../assets/edits/trey.webp" class="video">
+            <img src="../assets/edits/sawyer.webp" class="video">
+            <video class="video" poster="../assets/edits/pickos24.jpg" playsinline controls>
                 <source src="../assets/edits/pickos24.mp4" type="video/mp4">
             </video>
-            <img src="../assets/edits/reed1ball.png" class="video">
-            <video class="video" ref="videoElement" preload="metadata" muted playsinline controls>
+            <img src="../assets/edits/reed1ball.webp" class="video">
+            <video class="video" poster="../assets/edits/Santas.webp" playsinline controls>
                 <source src="../assets/edits/Santas.mp4" type="video/mp4">
             </video>
-            <img src="../assets/edits/aidenbflip.png" class="video">
-            <video class="video" ref="videoElement" preload="metadata" muted playsinline controls>
+            <img src="../assets/edits/aidenbflip.webp" class="video">
+            <video class="video" poster="../assets/edits/hawaii25.webp" playsinline controls>
                 <source src="../assets/edits/hawaii25.mp4" type="video/mp4">
             </video>
         </div>

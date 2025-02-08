@@ -37,7 +37,7 @@ img {
 
 .green {
     background-color: rgb(93, 179, 93);
-    margin: 30px 15vw 30px 15vw;
+    margin: 100px 15vw 0px 15vw;
 }
 
 .dark {
@@ -60,6 +60,7 @@ img {
 .gray {
     background-color: rgb(36, 36, 36);
     color: var(--eg);
+    margin: 60px 15vw 30px 15vw;
 }
 
 </style>
